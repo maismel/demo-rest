@@ -1,5 +1,34 @@
-# Vue 3 + TypeScript + Vite
+# Restaurant CRM
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A simple CRM dashboard for managing employees, built with **Vue 3**, **TypeScript**, **Pinia**, and **Element Plus**.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+The project demonstrates authentication flow, protected routes, data fetching from an external API, responsive layout.
+
+## Features
+
+- Authentication (login / logout)
+- Protected routes with navigation guards
+- Employees list with pagination
+- Statistics cards (total employees, gender-based stats)
+- Employee details modal (route-based)
+- Responsive layout (sidebar + mobile drawer)
+- UI built with Element Plus
+- API integration with centralized helper
+
+## Tech Stack & Dependencies
+
+- **Vue 3** (Composition API, `<script setup>`)
+- **TypeScript**
+- **Vite**
+- **Pinia** — state management
+- **Vue Router**
+- **Element Plus** — UI library
+- **DummyJSON API** — backend mock
+- **GitHub Pages** — deployment
+
+## Installation
+
+- Clone the repository: git clone https://github.com/your-username/demo-rest.git
+- Add .env (VITE_API_URL=https://dummyjson.com)
+- Install dependencies: npm install
+- Run the project: npm run dev

@@ -1,5 +1,5 @@
 import type { User } from "../types/user";
-import { API_URL } from "./auth";
+import { API_URL } from "./config";
 import { checkResponse } from "./helpers";
 
 interface UsersResponse {

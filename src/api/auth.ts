@@ -1,7 +1,6 @@
 import type { User } from "../types/user";
+import { API_URL } from "./config";
 import { checkResponse } from "./helpers";
-
-export const API_URL = "https://dummyjson.com";
 
 export interface LoginResponse {
   accessToken: string;
