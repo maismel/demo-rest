@@ -3,6 +3,7 @@
 A simple CRM dashboard for managing employees, built with **Vue 3**, **TypeScript**, **Pinia**, and **Element Plus**.
 
 The project demonstrates authentication flow, protected routes, data fetching from an external API, responsive layout.
+demo: https://maismel.github.io/demo-rest/
 
 ## Features
 
