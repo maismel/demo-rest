@@ -29,8 +29,12 @@ export const useAuthStore = defineStore("auth", () => {
       localStorage.setItem("refreshToken", rt);
 
       currentUser.value = await fetchUserData(at);
-    } catch (err: any) {
-      error.value = err.message ?? "Login failed";
+    } catch (err: unknown) {
+      if (err && typeof err === "object" && "message" in err) {
+        error.value = (err as { message: string }).message;
+      } else {
+        error.value = "Login failed";
+      }
       throw err;
     } finally {
       isLoading.value = false;

@@ -16,8 +16,12 @@ export const useUserStore = defineStore("user", () => {
     try {
       const data = await getUsersApi();
       allUsers.value = data;
-    } catch (err: any) {
-      error.value = err.message || "Unknown error";
+    } catch (err: unknown) {
+      if (err && typeof err === "object" && "message" in err) {
+        error.value = (err as { message: string }).message;
+      } else {
+        error.value = "Unknown error";
+      }
     } finally {
       loading.value = false;
     }

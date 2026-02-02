@@ -63,6 +63,8 @@ const handleSubmit = async () => {
       </el-form-item>
 
       <el-button native-type="submit">Submit</el-button>
+      <p v-if="authStore.error" class="login-error">{{ authStore.error }}</p>
+
     </el-form>
   </div>
 </template>
@@ -78,5 +80,12 @@ const handleSubmit = async () => {
 .el-form {
   background: var(--el-fill-color-lighter);
   padding: 30px;
+}
+
+.login-error {
+  color: red;
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 12px;
 }
 </style>
